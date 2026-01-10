@@ -9,10 +9,10 @@ export default function NavigationBar() {
     const lastScrollY = useRef(0);
     const scrollTimer = useRef<NodeJS.Timeout | null>(null);
     const navLinks = [
-        { label: "ABOUT", href: "#about" },
-        { label: "WORK", href: "#work" },
-        { label: "SERVICES", href: "#services" },
-        { label: "CONTACT", href: "#contact" },
+        { label: "ABOUT", href: "/about" },
+        { label: "WORKS", href: "/works" },
+        { label: "SERVICES", href: "/services" },
+        { label: "CONTACT", href: "/contact" },
     ];
 
     useEffect(() => {
@@ -98,7 +98,7 @@ export default function NavigationBar() {
     return (
         <nav className="fixed flex justify-center items-center w-screen overflow-hidden z-50">
             <div ref={navRef} className="w-full flex justify-between gap-1 sm:gap-4 items-center mt-4 py-4 px-8">
-                <h1 className="text-white text-3xl md:text-4xl pr-6 font-bold font-futura-condensed">DEVO</h1>
+                <Link href={"/"} className="text-white text-3xl md:text-4xl pr-6 font-bold font-futura-condensed">DEVO</Link>
                 <div className="text-white gap-1 hidden md:flex sm:gap-8 items-center justify-center">
                     {navLinks.map((link) => (
                         <Link

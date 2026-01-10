@@ -1,5 +1,5 @@
-import React from 'react'
 import Project from '@/components/common/Project';
+import Link from 'next/link';
 
 export default function ProjectsSection() {
   const projects = [
@@ -41,21 +41,29 @@ export default function ProjectsSection() {
   ];
   return (
     <section className="min-h-screen w-full flex justify-center items-center flex-col gap-4 py-20">
-        <div className="w-[80%] grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-            {projects.map((project, index) => (
-                <div 
-                    key={index} 
-                    className={`w-full ${index % 2 !== 0 ? 'md:mt-0' : ''}`}
-                >
-                    <Project 
-                        title={project.title}
-                        imageUrl={project.imageUrl}
-                        description={project.description}
-                    />
-                </div>
-            ))}
-            
+      <div className="w-[80%] grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className={`w-full ${index % 2 !== 0 ? 'md:mt-24' : 'md:-mt-16'}`}
+          >
+            <Project
+              title={project.title}
+              imageUrl={project.imageUrl}
+              description={project.description}
+            />
+          </div>
+        ))}
+        <div className='flex flex-col gap-4 justify-center p-12 items-center relative w-full aspect-square bg-gray rounded-xl overflow-hidden shadow-lg' style={{borderRadius: '0.75rem'}}>
+          <h3 className='text-white font-futura-condensed font-extrabold text-9xl text-start'>WANNA SEE MORE?</h3>
+          <p className='text-gray-400 font-futura-medium text-xl'>
+            Explore our portfolio and discover what we can achieve for you. Let’s create something extraordinary together.
+          </p>
+          <Link href="/works" className="bg-green px-4 py-2 text-gray rounded-lg font-bold text-xl font-futura-condensed hover:underline">
+            SEE MORE
+          </Link>
         </div>
+      </div>
     </section>
   )
 }
