@@ -1,7 +1,17 @@
+'use client';
+
+import React, { useRef } from 'react';
 import Project from '@/components/common/Project';
 import Link from 'next/link';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function ProjectsSection() {
+  const containerRef = useRef<HTMLElement>(null);
+
   const projects = [
     {
       title: "O-WEEK 2025",
@@ -39,13 +49,34 @@ export default function ProjectsSection() {
       description: "Sembako Bayi Ponorogo is a charitable initiative aimed at providing essential food supplies (sembako) to infants and young children in need within the Ponorogo region. This program focuses on improving the nutritional status and overall well-being of vulnerable children by distributing food packages containing staple items such as rice, milk, and other nutritious foods."
     }
   ];
+
+  useGSAP(() => {
+    const cards = gsap.utils.toArray('.project-card');
+
+    cards.forEach((card: any) => {
+      gsap.from(card, {
+        scrollTrigger: {
+          trigger: card,
+          start: "top 85%",
+          end: "bottom top",
+          toggleActions: "play none restart none", 
+        },
+        y: 100,          
+        opacity: 0,      
+        duration: 1,      
+        ease: "power3.out" 
+      });
+    });
+
+  }, { scope: containerRef });
+
   return (
-    <section className="min-h-screen w-full flex justify-center items-center flex-col gap-4 py-20">
+    <section ref={containerRef} className="min-h-screen w-full flex justify-center items-center flex-col gap-4 py-20">
       <div className="w-[80%] grid grid-cols-1 md:grid-cols-2 gap-18 items-start">
         {projects.map((project, index) => (
           <div
             key={index}
-            className={`w-full ${index % 2 !== 0 ? 'md:mt-24' : 'md:-mt-16'}`}
+            className={`project-card w-full ${index % 2 !== 0 ? 'md:mt-24' : 'md:-mt-16'}`}
           >
             <Project
               title={project.title}
@@ -54,7 +85,8 @@ export default function ProjectsSection() {
             />
           </div>
         ))}
-        <div className='flex flex-col gap-4 justify-center p-12 items-center relative w-full aspect-square bg-gray rounded-xl overflow-hidden shadow-lg' style={{borderRadius: '0.75rem'}}>
+        
+        <div className='project-card flex flex-col gap-4 justify-center p-12 items-center relative w-full aspect-square bg-gray rounded-xl overflow-hidden shadow-lg' style={{borderRadius: '0.75rem'}}>
           <h3 className='text-white font-futura-condensed font-extrabold text-9xl text-start'>WANNA SEE MORE?</h3>
           <p className='text-gray-400 font-futura-medium text-xl'>
             Explore our portfolio and discover what we can achieve for you. {`Let's`} create something extraordinary together.
