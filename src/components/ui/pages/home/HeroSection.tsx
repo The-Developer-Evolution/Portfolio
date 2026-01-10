@@ -70,7 +70,7 @@ export default function HeroSection() {
 
     return (
         <section ref={containerRef} className="min-h-screen w-full flex justify-center items-center flex-col gap-4 overflow-hidden">
-            <div className="flex flex-col justify-center items-center h-[80vh] w-full gap-4 text-center">
+            <div className="flex flex-col justify-center items-center h-[80vh] w-full gap-4 text-center overflow-hidden">
                 <h1 className="hero-title text-4xl md:text-7xl xl:text-9xl text-white font-futura-condensed font-extrabold leading-6 md:leading-14 xl:leading-26">DEVOTE TO THE VISION</h1>
                 <h1 className="hero-title text-4xl md:text-7xl xl:text-9xl text-pink font-futura-condensed font-extrabold leading-6 md:leading-14 xl:leading-26">DEVELOP THE INNOVATION</h1>
                 <h1 className="hero-title text-4xl md:text-7xl xl:text-9xl text-white font-futura-condensed font-extrabold leading-6 md:leading-14 xl:leading-26">DELIVER THE SOLUTION</h1>
