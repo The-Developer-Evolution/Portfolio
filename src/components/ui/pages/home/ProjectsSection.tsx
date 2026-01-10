@@ -41,7 +41,7 @@ export default function ProjectsSection() {
   ];
   return (
     <section className="min-h-screen w-full flex justify-center items-center flex-col gap-4 py-20">
-      <div className="w-[80%] grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+      <div className="w-[80%] grid grid-cols-1 md:grid-cols-2 gap-18 items-start">
         {projects.map((project, index) => (
           <div
             key={index}
@@ -57,9 +57,9 @@ export default function ProjectsSection() {
         <div className='flex flex-col gap-4 justify-center p-12 items-center relative w-full aspect-square bg-gray rounded-xl overflow-hidden shadow-lg' style={{borderRadius: '0.75rem'}}>
           <h3 className='text-white font-futura-condensed font-extrabold text-9xl text-start'>WANNA SEE MORE?</h3>
           <p className='text-gray-400 font-futura-medium text-xl'>
-            Explore our portfolio and discover what we can achieve for you. Let’s create something extraordinary together.
+            Explore our portfolio and discover what we can achieve for you. {`Let's`} create something extraordinary together.
           </p>
-          <Link href="/works" className="bg-green px-4 py-2 text-gray rounded-lg font-bold text-xl font-futura-condensed hover:underline">
+          <Link href="/works" className="mt-8 bg-green px-4 py-2 self-start text-gray rounded-full font-bold text-xl font-futura-condensed hover:underline">
             SEE MORE
           </Link>
         </div>
