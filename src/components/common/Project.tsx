@@ -7,6 +7,8 @@ export default function Project({ title, imageUrl, description }: projectInterfa
         <Image
           src={imageUrl}
           alt={title}
+          draggable={false}
+          loading='lazy'
           fill 
           className='object-cover object-center' style={{borderRadius: '0.75rem'}}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
