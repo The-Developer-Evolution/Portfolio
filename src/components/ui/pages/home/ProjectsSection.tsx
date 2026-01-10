@@ -57,14 +57,14 @@ export default function ProjectsSection() {
       gsap.from(card, {
         scrollTrigger: {
           trigger: card,
-          start: "top 100%",
+          start: "top 85%",
           end: "bottom top",
-          toggleActions: "restart none restart none",
+          toggleActions: "play none none reverse", 
         },
-        y: 200,          
-        opacity: 0,      
-        duration: 1,      
-        ease: "power3.out" 
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out"
       });
     });
 
