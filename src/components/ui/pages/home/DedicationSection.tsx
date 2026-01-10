@@ -19,7 +19,6 @@ export default function DedicationSection() {
                 end: "bottom top",
                 toggleActions: "restart none restart none",
             }
-            //
         });
 
         tl.from(".title", {
