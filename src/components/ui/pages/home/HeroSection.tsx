@@ -1,11 +1,26 @@
 import LogoLoop from "@/components/common/LogoLoop";
-import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si';
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiLaravel, SiUnity, SiPrisma, SiPostgresql, SiPhp, SiDocker, SiNginx, SiExpress, SiMongodb, SiSupabase, SiKotlin, SiAndroidstudio, SiSwift, SiPusher, SiSocketdotio } from 'react-icons/si';
 export default function HeroSection() {
     const techLogos = [
         { node: <SiReact />, title: "React", href: "https://react.dev" },
         { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
         { node: <SiTypescript />, title: "TypeScript", href: "https://www.typescriptlang.org" },
         { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
+        { node: <SiLaravel />, title: "Laravel", href: "https://laravel.com" },
+        { node: <SiUnity />, title: "Unity", href: "https://unity.com" },
+        { node: <SiPrisma />, title: "Prisma", href: "https://prisma.io" },
+        { node: <SiPostgresql />, title: "PostgreSQL", href: "https://www.postgresql.org" },
+        { node: <SiPhp />, title: "PHP", href: "https://www.php.net" },
+        { node: <SiDocker />, title: "Docker", href: "https://www.docker.com" },
+        { node: <SiNginx />, title: "Nginx", href: "https://www.nginx.com" },
+        { node: <SiExpress />, title: "Express.js", href: "https://expressjs.com" },
+        { node: <SiMongodb />, title: "MongoDB", href: "https://www.mongodb.com" },
+        { node: <SiSupabase />, title: "Supabase", href: "https://supabase.com" },
+        { node: <SiKotlin />, title: "Kotlin", href: "https://kotlinlang.org" },
+        { node: <SiAndroidstudio />, title: "Android Studio", href: "https://developer.android.com/studio" },
+        { node: <SiSwift />, title: "Swift", href: "https://swift.org" },
+        { node: <SiPusher />, title: "Pusher", href: "https://pusher.com" },
+        { node: <SiSocketdotio />, title: "Socket.io", href: "https://socket.io" },
     ];
     return (
         <section className="min-h-screen w-full flex justify-center items-center flex-col gap-4">
