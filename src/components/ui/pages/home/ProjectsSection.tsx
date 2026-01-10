@@ -57,11 +57,11 @@ export default function ProjectsSection() {
       gsap.from(card, {
         scrollTrigger: {
           trigger: card,
-          start: "top 85%",
+          start: "top 100%",
           end: "bottom top",
-          toggleActions: "play none restart none", 
+          toggleActions: "restart none restart none",
         },
-        y: 100,          
+        y: 200,          
         opacity: 0,      
         duration: 1,      
         ease: "power3.out" 
@@ -87,11 +87,11 @@ export default function ProjectsSection() {
         ))}
         
         <div className='project-card flex flex-col gap-4 justify-center p-12 items-center relative w-full aspect-square bg-gray rounded-xl overflow-hidden shadow-lg' style={{borderRadius: '0.75rem'}}>
-          <h3 className='text-white font-futura-condensed font-extrabold text-9xl text-start'>WANNA SEE MORE?</h3>
-          <p className='text-gray-400 font-futura-medium text-xl'>
+          <h3 className='text-white font-futura-condensed font-extrabold text-4xl md:text-9xl text-start'>WANNA SEE MORE?</h3>
+          <p className='text-gray-400 font-futura-medium text-sm'>
             Explore our portfolio and discover what we can achieve for you. {`Let's`} create something extraordinary together.
           </p>
-          <Link href="/works" className="mt-8 bg-green px-4 py-2 self-start text-gray rounded-full font-bold text-xl font-futura-condensed hover:underline">
+          <Link href="/works" className="mt-0 md:mt-8 bg-green px-4 py-2 self-start text-gray rounded-full font-bold text-lg md:text-xl font-futura-condensed hover:underline">
             SEE MORE
           </Link>
         </div>
