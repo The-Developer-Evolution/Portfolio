@@ -10,9 +10,8 @@ export default function NavigationBar() {
     const scrollTimer = useRef<NodeJS.Timeout | null>(null);
     const navLinks = [
         { label: "ABOUT", href: "#about" },
-        { label: "WORK", href: "#projects" },
-        { label: "SERVICES", href: "#projects" },
-        { label: "CAREERS", href: "#projects" },
+        { label: "WORK", href: "#work" },
+        { label: "SERVICES", href: "#services" },
         { label: "CONTACT", href: "#contact" },
     ];
 
