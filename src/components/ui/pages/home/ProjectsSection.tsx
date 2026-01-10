@@ -76,6 +76,7 @@ export default function ProjectsSection() {
         {projects.map((project, index) => (
           <div
             key={index}
+            style={{ willChange: 'transform, opacity' }}
             className={`project-card w-full ${index % 2 !== 0 ? 'md:mt-24' : 'md:-mt-16'}`}
           >
             <Project
