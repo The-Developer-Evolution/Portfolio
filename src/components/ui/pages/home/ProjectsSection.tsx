@@ -47,6 +47,16 @@ export default function ProjectsSection() {
       title: "SEMBAKO BAYI PONOROGO",
       imageUrl: "/images/projects/sembakobayi-project.webp",
       description: "Sembako Bayi Ponorogo is a charitable initiative aimed at providing essential food supplies (sembako) to infants and young children in need within the Ponorogo region. This program focuses on improving the nutritional status and overall well-being of vulnerable children by distributing food packages containing staple items such as rice, milk, and other nutritious foods."
+    },
+    {
+      title: "WRAKSA KENCANA MUKTI",
+      imageUrl: "/images/projects/wkm-project.webp",
+      description: "PT. Wraksa Kencana Mukti is a system integrator with expertise in automation industry, we developed a sophisticated web platform that merges corporate identity with functional utility. The site features an expansive catalog of products, services, and portfolio highlights, underpinned by a custom user management system. By implementing a 'gated' Interest List feature, we successfully turned the website into a strategic lead generation tool, encouraging user registration and facilitating precise demand tracking."
+    },
+    {
+      title: "MANAGEMENT WKM",
+      imageUrl: "/images/projects/managementwkm-project.webp",
+      description: "Management Wraksa Kencana Mukti is a central management system for PT. Wraksa Kencana Mukti in order to boost efficiency and streamline operations."
     }
   ];
 
