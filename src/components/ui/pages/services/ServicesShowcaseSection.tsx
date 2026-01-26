@@ -9,42 +9,42 @@ export default function ServicesShowcaseSection() {
         {
             icon: SiReact,
             title: "Web Development",
-            description: "Create powerful, responsive, and scalable web applications that deliver exceptional user experiences across all devices.",
+            description: "We focus on making fullstack or static web applications with clean minimalist or robust maximalist design. Capable of using multiple frameworks like Laravel, Next.js, and Vite, along with various libraries—or we can learn them when needed.",
             features: [
-                "Modern responsive design",
+                "Fullstack & static web applications",
+                "Minimalist or maximalist design approach",
+                "Multiple frameworks (Laravel, Next.js, Vite)",
                 "Progressive Web Apps (PWA)",
                 "E-commerce solutions",
-                "Custom CMS development",
-                "API integration & development",
-                "Performance optimization"
+                "API integration & development"
             ],
             color: "#61DAFB"
         },
         {
             icon: SiAndroid,
             title: "Android Development",
-            description: "Build native Android applications with cutting-edge technology, ensuring smooth performance and intuitive user interfaces.",
+            description: "We focus on making Android applications with backend integration using Prisma and Express. Whether it's a small everyday app or a work-like ecommerce application, we deliver with multiple design styles tailored to your needs.",
             features: [
-                "Native Android apps",
-                "Material Design implementation",
+                "Backend integration (Prisma & Express)",
+                "Everyday utility apps",
+                "E-commerce applications",
+                "Multiple design styles",
                 "Real-time features & push notifications",
-                "Offline-first architecture",
-                "Play Store optimization",
-                "Cross-device compatibility"
+                "Play Store optimization"
             ],
             color: "#3DDC84"
         },
         {
             icon: SiUnity,
             title: "Game Development",
-            description: "Craft immersive gaming experiences with stunning visuals, engaging gameplay mechanics, and seamless performance.",
+            description: "We focus on making 2D games with multiplayer functionality and backend integration. While we're still learning and expanding our capabilities, we're committed to delivering engaging gaming experiences.",
             features: [
-                "2D & 3D game development",
-                "Cross-platform deployment",
+                "2D game development",
                 "Multiplayer functionality",
-                "In-game monetization",
+                "Backend integration",
+                "Unity engine expertise",
                 "Physics & animation systems",
-                "Performance optimization"
+                "Continuous learning & improvement"
             ],
             color: "#000000"
         }
@@ -72,7 +72,6 @@ export default function ServicesShowcaseSection() {
                             title={service.title}
                             description={service.description}
                             features={service.features}
-                            color={service.color}
                             index={index}
                         />
                     ))}
