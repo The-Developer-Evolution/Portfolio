@@ -38,11 +38,25 @@ export default function ServicesCTASection() {
             ease: "power2.out"
         }, "-=0.8")
         .from(".cta-arrow", {
-            y: 50,
+            scale: 0,
             opacity: 0,
-            duration: 1.5,
-            ease: "expo.out"
-        }, "-=0.8");
+            rotation: 180,
+            duration: 1.2,
+            stagger: 0.15,
+            ease: "back.out(1.4)"
+        }, "-=0.6");
+
+        // Smooth floating animation for arrows
+        gsap.to(".cta-arrow", {
+            y: "+=15",
+            duration: 2,
+            ease: "sine.inOut",
+            stagger: {
+                each: 0.2,
+                repeat: -1,
+                yoyo: true
+            }
+        });
     }, { scope: containerRef });
 
     return (
